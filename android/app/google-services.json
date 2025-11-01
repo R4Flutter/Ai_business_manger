@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "565896068214",
+    "project_id": "ai-business-manager-89107",
+    "storage_bucket": "ai-business-manager-89107.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:565896068214:android:6582502767b2d150e83357",
+        "android_client_info": {
+          "package_name": "com.example.hack_this_fall_25"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCkItOsYZH9nPC4wzbYSxCBaWF6Flo_myI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
