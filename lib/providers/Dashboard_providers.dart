@@ -82,7 +82,7 @@ final topSellingProductsProvider = Provider<AsyncValue<List<Product>>>((ref) {
   for (var tx in transactions) {
     if (tx.type == 'sale') {
       productSaleCounts[tx.productId] =
-          ((productSaleCounts[tx.productId] ?? 0) + tx.quantity) as int;
+          ((productSaleCounts[tx.productId] ?? 0) + tx.quantity);
     }
   }
 
