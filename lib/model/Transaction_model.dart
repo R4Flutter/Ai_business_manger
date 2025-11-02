@@ -2,7 +2,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 
 class Transaction {
   final String transactionId;
-  final String productId; // Simplified: in real app, this might be a list
+  final String productId;
   final String type; // 'sale' or 'expense'
   final int quantity;
   final double total;
@@ -19,7 +19,6 @@ class Transaction {
     required this.source,
   });
 
-  // Factory to create a Transaction from Firestore data
   factory Transaction.fromFirestore(Map<String, dynamic> data) {
     return Transaction(
       transactionId: data['transactionId'] ?? '',
@@ -30,5 +29,17 @@ class Transaction {
       createdAt: (data['createdAt'] as Timestamp? ?? Timestamp.now()).toDate(),
       source: data['source'] ?? 'manual',
     );
+  }
+
+  Map<String, dynamic> toMap() {
+    return {
+      'transactionId': transactionId,
+      'productId': productId,
+      'type': type,
+      'quantity': quantity,
+      'total': total,
+      'createdAt': Timestamp.fromDate(createdAt),
+      'source': source,
+    };
   }
 }

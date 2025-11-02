@@ -52,7 +52,7 @@ final productsStreamProvider = StreamProvider<List<Product>>((ref) {
   // Map the snapshot to a List<Product>
   return collection.snapshots().map(
         (snapshot) => snapshot.docs
-            .map((doc) => Product.fromFirestore(doc.data()))
+            .map((doc) => Product.fromFirestore(doc.data(), doc.id))
             .toList(),
       );
 });
